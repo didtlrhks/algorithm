@@ -12,7 +12,7 @@ var N = Int(readLine()!)!
 
 var graph = [[Int]](repeating: [], count: N + 1)
 var parent = [Int](repeating : -1,count: N + 1)
-var node = readLine()?.split(separator: " ").map{Int($0)} // 배열 생성해서 넣어준거고 ,
+
 
 
 for _ in 0..<N-1 {
