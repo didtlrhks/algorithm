@@ -8,9 +8,8 @@
 import Foundation
 
 
-var N = Int(readLine()!)!
 
-var node = readLine()?.split(separator: " ").map{Int($0)} // 배열 생성해서 넣어준거고 ,
+
 
 
 
