@@ -8,24 +8,20 @@
 import Foundation
 
 
+var N = Int(readLine()!)!
 
-let N = Int(readLine()!)!
+var Front = 0
+var Back = 0
 
-var arr : [Int] = []
+var array : [Int] = []
 
-var result : [Int] = []
 
-for i in 1...4 {
-    
-    arr.append(i)
-    
+for i in 1..<N + 1 {
+    array.append(i)
 }
 
+print(array)
+Back = array.count
 
-while(result.count == 1){
-    
-    arr.remove(at: arr.first!)
-    result = arr
-}
-
-print(result)
+//print(Back)
+//while()
