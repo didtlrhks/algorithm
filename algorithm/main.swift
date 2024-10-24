@@ -23,5 +23,19 @@ for i in 1..<N + 1 {
 print(array)
 Back = array.count
 
+print(Back - Front)
+while(Back - Front) != 1{
+    Front += 1
+    
+    let first = array[Front]
+    Front += 1
+    array.append(first)
+    Back += 1
+    
+    
+}
+
+
+print(array[Front])
 //print(Back)
 //while()
