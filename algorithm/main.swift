@@ -6,36 +6,35 @@
 //
 
 import Foundation
+//입출력 예시
+//4 2
+//1 2 3 4
 
 
-var N = Int(readLine()!)!
-
-var Front = 0
-var Back = 0
-
-var array : [Int] = []
-
-
-for i in 1..<N + 1 {
-    array.append(i)
+for _ in 0 ..< Int(readLine()!)! {
+    let nm = readLine()!.split(separator: " ").map { Int(String($0))! } // 왜 String 을 받아서 Int 로 변환하는거지?
+    var importancies = readLine()!.split(separator: " ").map { Int(String($0))! }
+    if importancies.count == 1 {
+        print(1)
+        continue
+    }
+    var currentPoint = nm[1]
+    var count = 0
+    
+    while true {
+        if importancies.first! == importancies.max()! {
+            count += 1
+            importancies.removeFirst()
+            if currentPoint == 0 {
+                break
+            } else {
+                currentPoint -= 1
+            }
+        } else {
+            importancies.append(importancies.first!)
+            importancies.removeFirst()
+            currentPoint = currentPoint == 0 ? importancies.count - 1 : currentPoint - 1
+        }
+    }
+    print(count)
 }
-
-print(array)
-Back = array.count
-
-print(Back - Front)
-while(Back - Front) != 1{
-    Front += 1
-    
-    let first = array[Front]
-    Front += 1
-    array.append(first)
-    Back += 1
-    
-    
-}
-
-
-print(array[Front])
-//print(Back)
-//while()
