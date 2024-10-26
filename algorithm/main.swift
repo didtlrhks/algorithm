@@ -21,8 +21,9 @@ for _ in 0 ..< Int(readLine()!)! {
     var currentPoint = nm[1]
     var count = 0
     
-    while true {
-        if importancies.first! == importancies.max()! {
+    while true {//while 문이 이해가 안됨
+        
+        if importancies.first! == importancies.max()! {// 여기서 느낌표가 언래핑이구나
             count += 1
             importancies.removeFirst()
             if currentPoint == 0 {
