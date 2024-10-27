@@ -8,43 +8,35 @@
 import Foundation
 
 
-//
-//let K = Int(readLine()!)!
-//var list =  readLine()!.split(separator:" " ).map{Int(String($0))!}
-//
-//var answer = Array(repeating: [Int](), count: K)
-//
-//func find(_ left: Int, _ right: Int, level: Int ) {
-//    if left>right{ return }
-//    let mid = (left+right)/2
-//    answer[level].append(list[mid])
-//    find(left, mid-1, level: level+1)
-//    find(mid+1, right, level: level+1)
-//}
-//find(0, list.count-1, level: 0)
-//answer.forEach{
-//    $0.forEach{print($0, terminator: " ")}
-//    print()
-//}
-
-
-
-let K = Int(readLine()!)!
-
-var list = readLine()!.split(separator: " ").map{Int(String($0))!}
-
-var answer = Array(repeating : [Int](),count: K)
-
-func find(_ left : Int , _ right : Int,_ level : Int){
-    if left > right {return}
-    let mid = (left + right)/2
-    answer[level].append(list[mid])
-    find(left,mid-1,level+1)
-    find(mid+1,right,level+1)
+struct Node{
+    let left : String
+    let right : String
+    
 }
-find(0,list.count-1,0 )
-answer.forEach{
-    $0.forEach{print($0,terminator: " ")}
-    print()
+
+let N = Int(readLine()!)!
+var tree : [String : Node] = [:]
+
+for _ in 0..<N {
+    let input = readLine()!.split(separator: " ").map{String($0)}
+    tree[input[0]] = Node(left: input[1], right: input[2])
+    
+    //이제 딕셔너리에다가 루트랑 레프트 라이트 저장한거임
+    
 }
+
+func preorder(_ t : String){
+    
+}
+
+func inorder(_ t : String){
+    
+}
+
+func postorder(_ t :String){
+    
+}
+
+
+
 
