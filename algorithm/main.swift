@@ -27,16 +27,41 @@ for _ in 0..<N {
 
 func preorder(_ t : String){
     
+    if t == "."{
+        return
+    }
+    print(t,terminator: "")
+    preorder(tree[t]!.left)
+    preorder(tree[t]!.right)
+    
 }
 
 func inorder(_ t : String){
+    if t == "."{
+        return
+    }
+    inorder(tree[t]!.left)
+    print(t,terminator: "")
+    inorder(tree[t]!.right)
     
 }
 
 func postorder(_ t :String){
+    if t == "."{
+        return
+    }
+    postorder(tree[t]!.left)
     
+    postorder(tree[t]!.right)
+    print(t,terminator: "")
 }
 
 
 
 
+
+let orders = [preorder,inorder,postorder]
+orders.forEach{
+    $0("A")
+    print()
+}
